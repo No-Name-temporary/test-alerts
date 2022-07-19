@@ -1,0 +1,17 @@
+{
+  "name": "test-alerts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "locally": "node -e \"console.log(require('./index').handler(require('./event.json')));\"",
+    "zip": "zip -r test-alerts.zip ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb": "^19.0.4"
+  }
+}
