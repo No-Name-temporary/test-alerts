@@ -1,44 +1,29 @@
 {
-  "results": {
-    "title": "example-working-test",
-    "sender": "us-west-1",
-    "timestamp": "Sat, 16 Jul 2022 13:43:07 GMT",
-    "results": [
-      {
-        "assertionType": "statusCode",
-        "targetValue": "200",
-        "actualValue": 400,
-        "comparisonType": "equal_to",
-        "success": false
-      },
-      {
-        "assertionType": "responseTime",
-        "targetValue": "750",
-        "actualValue": 900,
-        "comparisonType": "less_than",
-        "success": false
-      },
-      {
-        "assertionType": "Headers",
-        "property": "Content-Type",
-        "targetValue": "json",
-        "actualValue": "json",
-        "comparisonType": "equal_to",
-        "success": true
-      }
-    ]
-  },
-  "alerting": {
-    "retryCount": 3,
-    "alerts": [
-      {
-        "type": "slack",
-        "address": "http://..."
-      },
-      {
-        "type": "email",
-        "address": "team.notspecial@gmail.com"
-      }
-    ]
-  }
+  "title": "first_get_test",
+  "sender": "us-west-1",
+  "timestamp": "Sat, 16 Jul 2022 13:43:07 GMT",
+  "results": [
+    {
+      "assertionType": "statusCode",
+      "targetValue": "200",
+      "actualValue": "400",
+      "comparisonType": "equal_to",
+      "success": false
+    },
+    {
+      "assertionType": "responseTime",
+      "targetValue": "750",
+      "actualValue": "900",
+      "comparisonType": "less_than",
+      "success": false
+    },
+    {
+      "assertionType": "Headers",
+      "property": "Content-Type",
+      "targetValue": "json",
+      "actualValue": "json",
+      "comparisonType": "equal_to",
+      "success": true
+    }
+  ]
 }
