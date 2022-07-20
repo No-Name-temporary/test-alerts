@@ -17,6 +17,14 @@
         "actualValue": 900,
         "comparisonType": "less_than",
         "success": false
+      },
+      {
+        "assertionType": "Headers",
+        "property": "Content-Type",
+        "targetValue": "json",
+        "actualValue": "json",
+        "comparisonType": "equal_to",
+        "success": true
       }
     ]
   },
@@ -29,7 +37,7 @@
       },
       {
         "type": "email",
-        "address": "tdronkers@gmail.com"
+        "address": "team.notspecial@gmail.com"
       }
     ]
   }
