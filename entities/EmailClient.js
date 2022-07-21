@@ -1,5 +1,6 @@
 const { formatBody } = require('../lib/utilities/formatBody');
-const { sendMail } = require('../lib/channels/sendMail');
+// const { sendMail } = require('../lib/channels/sendMail');
+const { sendSES } = require('../lib/channels/sendSES');
 
 class EmailClient {
   constructor(destination, results) {
@@ -8,7 +9,7 @@ class EmailClient {
   }
 
   async send() {
-    const result = await sendMail(this.destination, this.message);
+    const result = await sendSES(this.destination, this.message);
     console.log('send email result: ', result);
     return result;
   }

@@ -4,7 +4,6 @@ const { getAlertInfo } = require('./lib/db/db_query');
 
 exports.handler = async (event) => {
   const alertChannels = await getAlertInfo(event.title);
-  console.log('ALERT CHANNELS: ', alertChannels);
   const targets = [];
 
   alertChannels.forEach((target) => {
