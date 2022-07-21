@@ -1,12 +1,10 @@
 const { EmailClient } = require('./entities/EmailClient');
 // const { SlackCLient } = require('./entities/SlackClient');
-const { getAlertInfo, getTestId } = require('./lib/db/db_query');
-require('dotenv').config();
+const { getAlertInfo } = require('./lib/db/db_query');
 
 exports.handler = async (event) => {
-  const { id: testId } = await getTestId(event.title);
-  const alertChannels = await getAlertInfo(testId);
-
+  const alertChannels = await getAlertInfo(event.title);
+  console.log('ALERT CHANNELS: ', alertChannels);
   const targets = [];
 
   alertChannels.forEach((target) => {
