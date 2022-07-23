@@ -23,5 +23,6 @@ exports.handler = async (event) => {
     }
   });
 
-  targets.forEach((target) => target.send());
+  const results = await Promise.allSettled(targets.map((target) => target.send()));
+  console.log('Notification Results: ', results);
 };
